@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pdfplumber = "*"
+pdfquery = "*"
+lxml = "*"
+cssselect = "*"
+flask = "*"
+requests = "*"
+frozen-flask = "*"
+gunicorn = "*"
+ipdb = "*"
+ipython = "*"
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+"jinja2" = "*"
+jupyter = "*"
+tabula-py = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
