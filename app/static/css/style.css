@@ -1,0 +1,254 @@
+h1 {
+    font-size: 8vw;
+    font-family: 'Overpass Mono', monospace;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.corkscrew img {
+    width: 12vw;
+    margin-left: 34vw;
+}
+
+#intro {
+    width: 40vw;
+    margin-left: 30vw;
+    margin-bottom: 5vw;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 2vw;
+}
+
+#map {
+    width: 94vw;
+    height: 650px;
+    margin-top: 7vh;
+    margin-left: 2.5vw;
+    margin-bottom: 5vh;
+}
+
+#sum-filtered-data {
+    margin-left: 30vw;
+    margin-bottom: 0;
+}
+
+#filtered-data {
+    margin-left: 30vw;
+}
+
+#all-shippers {
+    display: none;
+    margin-bottom: 7vw;
+    margin-left: 30vw;
+}
+
+.shipper {
+    font-family: 'Overpass Mono', monospace;
+    margin-bottom: 4vw;
+}
+
+.shipper:first-child {
+    margin-top: 7vw;
+}
+
+#filter {
+    margin-top: 5vw;
+    align-items: center;
+}
+
+#states {
+    width: 20vw;
+    height: 4vw;
+    margin-right: 2vw;
+    margin-left: 22vw;
+    display: inline;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 2vw;
+    border-radius: 0;
+}
+
+button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(166, 166, 166);
+    background-color: #ffffff;
+    font-size: 2vw;
+    width: 15vw;
+    height: 4vw;
+    display: inline;
+}
+
+#show-all-shippers {
+    margin-right: 2vw;
+    font-family: 'Overpass Mono', monospace;
+}
+
+#clear {
+    font-family: 'Overpass Mono', monospace;
+}
+
+.buffer {
+    margin-bottom: 10vw;
+}
+
+#charts {
+    width: 90vw;
+}
+
+.data-text {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 1.5vw;
+    margin-left: 10vw;
+    margin-bottom: 5vw;
+}
+
+.data-text a {
+    color: #000000;
+}
+
+.data-text:nth-of-type(1) {
+    margin-bottom: 0;
+}
+
+.grape-ape {
+    text-decoration: none;
+    color: #000000;
+}
+
+.mobile-data {
+    display: none;
+}
+
+.img {
+    display: block;
+    margin-bottom: 5vw;
+}
+
+#states-img, #states-historical-img {
+    margin-left: 18vw;
+}
+
+#counties-img {
+    margin-left: 13vw;
+}
+
+#addr-img {
+    margin-left: 9vw;
+}
+
+#emails-img {
+    margin-left: 10vw;
+}
+
+#phones-img {
+    margin-left: 23vw;
+}
+
+body {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15vw;
+}
+
+#author {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 1.25vw;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+#author a {
+    color: #000000;
+}
+
+@media only screen and (max-width: 450px) {
+    h1 {
+        font-size: 18vw;
+        margin-top: 5vw;
+    }
+
+    #intro {
+        width: 80vw;
+        font-size: 5vw;
+        margin-left: 10vw;
+    }
+
+    .corkscrew img {
+        width: 30vw;
+        margin-left: 25vw;
+    }
+
+    #map {
+        width: 100vw;
+        margin-left: 0;
+        margin-bottom: 5vw;
+        height: 300px;
+    }
+
+    #states {
+        margin-left: 3vw;
+        width: 35vw;
+        height: 12vw;
+        font-size: 5.5vw;
+        display: inline-block;
+    }
+
+    button {
+        display: inline-block;
+        width: 22vw;
+        height: 12vw;
+        font-size: 5.5vw;
+        text-align: center;
+    }
+
+    #clear {
+        width: 29vw;
+    }
+
+    #filtered-data {
+        margin-left: 5vw;
+    }
+
+    #all-shippers {
+        margin-left: 5vw;
+    }
+
+    .shipper p {
+        margin-bottom: 0;
+        font-size: 5vw;
+    }
+
+    .shipper h3 {
+        margin-bottom: 0;
+    }
+
+    .shipper {
+        margin-bottom: 10vw;
+        width: 95vw;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .data-text {
+        font-size: 5vw;
+    }
+
+    .mobile-data {
+        display: inline-block;
+        width: 85vw;
+        font-family: 'Overpass Mono', monospace;
+        font-size: 4vw;
+        margin-left: 7vw;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ol {
+        padding-left: 6vw;
+    }
+
+    #author {
+        font-size: 4vw;
+    }
+}

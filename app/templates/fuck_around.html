@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+    {% block content %}
+
+        <h1>grape aphid</h1>
+        <div id="intro">
+            <p>{{ intro }}</p>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="filter">
+            <select id="states" name="states" onChange="getStateData(this.value, shippers)"></select>
+            <button id="show-all-shippers" type="button" onclick="showAllShippers()" name="button">All</button>
+            <button id="clear" type="button" onclick="reset()" name="button">Clear</button>
+        </div>
+
+        <div id="charts">
+            <div class="data-text">
+                {{ chart_intro_1 }}
+                <div class="corkscrew"><img src="{{ url_for('static', filename='img/corkscrew.png') }}" alt=""></div>
+                {{ chart_intro_2 }}
+                <div class="corkscrew"><img src="{{ url_for('static', filename='img/corkscrew.png') }}" alt=""></div>
+            </div>
+
+    {% endblock %}
