@@ -4,11 +4,11 @@ It might seem like in this day and age ordering wine for shipment directly to yo
 
 Only recently could wineries apply to the Pennsylvania Liquor Control Board for a license to ship wine directly to consumers.
 
-At this writing, there are 834 that have paid their $250 and gotten one since August 8. The rules are [a little weird](http://www.lcb.pa.gov/Legal/Documents/003492.pdf). Plus: The site where the state [lists them all](http://www.lcbapps.lcb.state.pa.us/webapp/Retail/Direct_Shippers_list.asp) is frightening. Just **10 results per page** and no way to manipulate anything into showing you more at a time. **There's no way to search or filter the data.** Or even to order the results better.
+At this writing, there are 834 that have paid their $250 and gotten one since August 8, 2016. The rules are [a little weird](http://www.lcb.pa.gov/Legal/Documents/003492.pdf). Plus: The site where the state [lists them all](http://www.lcbapps.lcb.state.pa.us/webapp/Retail/Direct_Shippers_list.asp) is frightening. Just **10 results per page** and no way to manipulate anything into showing you more at a time. **There's no way to search or filter the data.** Or even to order the results better. (The site has since been taken down, the data now living in a PDF. But it looked like [this](https://github.com/thejqs/pa_wine_shippers/blob/master/example_images/plcb_wine_shippers.png).)
 
 There's no information about websites or ordering or inventory. And companies apply for these licenses with their official business names -- not the label names of the wineries -- so it's not so simple to even search the PLCB's existing inventory for the same wines. I decided against writing a pure search function for this reason. Who would know what to search for?
 
-Plus: Sometimes the number of shippers decreases. Sometimes the state's site goes down for what can be days at a time if there's a weekend involved. Even when it's all working correctly, try to use that thing on a phone.
+Plus: Sometimes the number of shippers decreases. Sometimes the state's site goes down for what can be days at a time if there's a weekend involved. Even when it's all working correctly, try to use that thing or the PDF on a phone.
 
 That site also doesn't contain any last-modified data. It seems the data is just tossed up there unsorted in any way a user might care about. New entries don't go at the beginning. They don't go at the end. They don't go in the middle. I checked. And, y'know, I just don't know.
 
@@ -30,7 +30,7 @@ Sample data looks like this:
 
 ![sample_data]
 
-Which, let's be real, is an improvement over this:
+Which, let's be real, is an improvement over that awful site:
 
 ![plcb_site]
 
@@ -40,29 +40,10 @@ More work to do -- it's already ripe for a cleaner refactor, among other things 
 
 But most importantly, this data, as the Western Pennsylvania dialect would have it, needs liberated.
 
-Let the fun begin:
-```python
-def run_the_jewels():
-    '''
-    a wrapper function to handle the scrape
+Let the fun begin.
 
-    args: none
+[plcb_site]:https://github.com/thejqs/pa_wine_shippers/blob/master/example_images/plcb_wine_shippers.png
 
-    returns: a list of lists, with each nested list representing
-    one page of the scrape
-    '''
-    page = page_tools.Page()
-    parser = page_tools.htmlParser()
-    helper = sc.scrapeHelper()
-    tree = parser.treeify(sc.set_base_url())
-    total_shippers_string = helper.get_total_shippers_string(tree)
-    total_shippers = helper.parse_total_shippers(total_shippers_string)
-    urls = helper.url_generator(total_shippers)
-    data = [page.get_winery_data(url) for url in urls]
-    return data
-```
-[plcb_site]:https://github.com/thejqs/pa_wine_shippers/blob/master/plcb_wine_shippers.png
+[sample_data]:https://github.com/thejqs/pa_wine_shippers/blob/master/example_images/json_sample.png
 
-[sample_data]:https://github.com/thejqs/pa_wine_shippers/blob/master/json_sample.png
-
-[wine_map]:https://github.com/thejqs/pa_wine_shippers/blob/master/wine_map.png
+[wine_map]:https://github.com/thejqs/pa_wine_shippers/blob/master/example_images/wine_map.png
